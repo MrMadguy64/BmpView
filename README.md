@@ -8,14 +8,10 @@ Copyright Mr.Madguy, 2023
 
 **Usage:** BmpView.exe BmpFile [Lum [Red [Green [Blue [VideoDriver [Width [Height [KeyboardDriver]]]]]]]]
 
-  BmpFile - path to 24-bit BMP file
-  
+  BmpFile - path to 24-bit BMP file  
   Lum - number of luminosity shades in palette (0 is default)
-  
   Red - number of red shades in palette (8 is default)
-  
   Green - number of green shades in palette (8 is default)
-  
   Blue - number of blue shades in palette (4 is default)
   
 **Note!:** Total number of colors, i.e. Lum*Red*Green*Blue, must not exceed 256. All colors exceeding this limit will be truncated. Negative value disables dithering for this channel. 1 and 0 are special values. 0 means that this color is unused and brightness will be set to 0 in palette. 1 means the same, but bringhtness for this color will be set to maximum value in palette. -1 or any incorrect value forces program to use default value. 332 bits (i.e. 8*8*4=256 colors) is default palette.
