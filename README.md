@@ -7,27 +7,44 @@ Copyright Mr.Madguy, 2023
 **License philosophy:** Programmers should be professionals, not just enthusiasts, who have to provide unrelated services in order to earn money. If one uses my work to earn money - then he should share part of his revenue with me. If you earn money via clogging nails, then why do you think hammer should be free for you? Buy it! I've put my effort into making tool for you to earn money. And it's like law of energy conservation. Every drop of sweat should pay off.
 
 **Usage:** BmpView.exe BmpFile [Lum [Red [Green [Blue [VideoDriver [Width [Height [KeyboardDriver]]]]]]]]
+
   BmpFile - path to 24-bit BMP file
+  
   Lum - number of luminosity shades in palette (0 is default)
+  
   Red - number of red shades in palette (8 is default)
+  
   Green - number of green shades in palette (8 is default)
+  
   Blue - number of blue shades in palette (4 is default)
+  
 **Note!:** Total number of colors, i.e. Lum*Red*Green*Blue, must not exceed 256. All colors exceeding this limit will be truncated. Negative value disables dithering for this channel. 1 and 0 are special values. 0 means that this color is unused and brightness will be set to 0 in palette. 1 means the same, but bringhtness for this color will be set to maximum value in palette. -1 or any incorrect value forces program to use default value. 332 bits (i.e. 8*8*4=256 colors) is default palette.
+
   VideoDriver - path to video driver (Vga.drv is default for DOS and Windows.drv - for Windows).
+  
   Width - demanded horizonal resolution (-1 or any incorrect value means default).
+  
   Height - demanded vertical resolution (-1 or any incorrect value means default).
+  
   KeyboardDriver - path to keyboard driver (Console.drv is default for DOS and Windows.drv - for Windows).
+  
 **Note!:** BmpView2.exe is linked as Windows GUI application, so Win32s is supported
+
 **Controls:**
+
   Arrows - scroll
+  
   Any other key - quit
+  
 **Features:**
+
   1) View 24-bit BMP file on 8-bit 256 colors display.
   2) Fast templated dithering.
   3) Rich palette control features.
   4) Complete abstraction from destination environment using OS-like API and driver model.
   5) Same program can run both under DOS and Windows (Win32s is supported).
   6) BitBlt with full clipping and scrolling support.
+     
 **Programming features:**
   1) Dynamic external declaration macro, which declares API externals only if they are really needed. Allows you to declare externals by simply including one large .inc file with all declarations inside without any risk of having all of this mess included into your exe's export table then.
 Program does not support any error messages. If program just closes silently then one of the following cases occured:
