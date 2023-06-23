@@ -18,7 +18,7 @@ Copyright Mr.Madguy, 2023
   
   Blue - number of blue shades in palette (4 is default)
   
-**Note!:** Total number of colors, i.e. Lum*Red*Green*Blue, must not exceed 256. All colors exceeding this limit will be truncated. Negative value disables dithering for this channel. 1 and 0 are special values. 0 means that this color is unused and brightness will be set to 0 in palette. 1 means the same, but bringhtness for this color will be set to maximum value in palette. -1 or any incorrect value forces program to use default value. 332 bits (i.e. 8*8*4=256 colors) is default palette.
+**Note!:** Total number of colors, i.e. Lum x Red x Green x Blue, must not exceed 256. All colors exceeding this limit will be truncated. Negative value disables dithering for this channel. 1 and 0 are special values. 0 means that this color is unused and brightness will be set to 0 in palette. 1 means the same, but bringhtness for this color will be set to maximum value in palette. -1 or any incorrect value forces program to use default value. 332 bits (i.e. 8*8*4=256 colors) is default palette.
 
   VideoDriver - path to video driver (Vga.drv is default for DOS and Windows.drv - for Windows).
   
@@ -60,6 +60,7 @@ Program does not support any error messages. If program just closes silently the
 It is recommended to try default values first and then adjust options one-by-one until you'll find a problem.
 
 **Files:**
+
   BmpView.exe - main program.
   
   HDpmi32.exe - HX DPMI32 host.
