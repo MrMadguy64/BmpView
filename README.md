@@ -9,9 +9,13 @@ Copyright Mr.Madguy, 2023
 **Usage:** BmpView.exe BmpFile [Lum [Red [Green [Blue [VideoDriver [Width [Height [KeyboardDriver]]]]]]]]
 
   BmpFile - path to 24-bit BMP file  
+  
   Lum - number of luminosity shades in palette (0 is default)
+  
   Red - number of red shades in palette (8 is default)
+  
   Green - number of green shades in palette (8 is default)
+  
   Blue - number of blue shades in palette (4 is default)
   
 **Note!:** Total number of colors, i.e. Lum*Red*Green*Blue, must not exceed 256. All colors exceeding this limit will be truncated. Negative value disables dithering for this channel. 1 and 0 are special values. 0 means that this color is unused and brightness will be set to 0 in palette. 1 means the same, but bringhtness for this color will be set to maximum value in palette. -1 or any incorrect value forces program to use default value. 332 bits (i.e. 8*8*4=256 colors) is default palette.
@@ -52,26 +56,46 @@ Program does not support any error messages. If program just closes silently the
   6) KeyboardDriver not found.
   7) Your hardware is not supported by KeyboardDriver.
   8) You are trying to use one of the drivers in wrong environment.
+     
 It is recommended to try default values first and then adjust options one-by-one until you'll find a problem.
+
 **Files:**
   BmpView.exe - main program.
+  
   HDpmi32.exe - HX DPMI32 host.
+  
   DpmiLD32.exe - HX PE loader.
+  
   DKrnl32.dll - HX Kernel32.dll emulation runtime.
+  
   Graph32.dll - video API library.
+  
   Keyb32.dll - keyboard API library.
+  
   Vga.drv - VGA video driver. 320x200 is default resolution.
+  
   VgaX.drv - VGA mode X driver. 320x240 is default resolution. Supports Width = 160, 180, 320, 360 and Height = 87, 100, 116, 120, 133, 160, 175, 200, 240, 350, 400, 480.
+  
   Svga.drv - driver for VGA or SVGA with VBE 1.0 support or better. 640x480 is default resolution.
+  
   SvgaLfb.drv - driver for SVGA with VBE 2.0 support or better. 640x480 is default resolution.
+  
   Console.drv - keyboard driver for console environment.
+  
   Windows.drv - video and keyboard wrapper driver for Windows environment. 640x480 is default resolution.
+  
   Test.bat - test program with default drivers and 6*6*6=216 colors palette.
+  
   TestLum.bat - test with default drivers and grayscale palette
+  
   Test1bpp.bat - test with default drivers and monochrome palette (MDA)
+  
   Test3bpp.bat - test with default drivers and 8 color palette
+  
   test4bpp.bat - test with default drivers and 16 color palette (EGA)
+  
   TestVga.bat - test Vga.drv driver.
+  
   TestVgaX.bat - test VgaX.drv driver.
   TestSvga.bat - test Svga.drv driver.
   TestLfb.bat - test SvgaLfb.drv driver.
