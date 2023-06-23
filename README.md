@@ -1,5 +1,6 @@
 # BmpView
 CLI 24-bit BMP Viewer for DOS and Win32
+
 Copyright Mr.Madguy, 2023
 
 **License:** Engine can be used for free for personal non-commercial purpose only. Any purpose, that involves explicit or implicit revenue, including indirect one (in case of budget or government organizations, educational purposes, etc.) - is allowed only after buying commercial license.
