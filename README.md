@@ -52,6 +52,7 @@ Any form of reverse-engineering is forbidden, including but not limited to debug
      
 **Programming features:**
   1) Dynamic external declaration macro, which declares API externals only if they are really needed. Allows you to declare externals by simply including one large .inc file with all declarations inside without any risk of having all of this mess included into your exe's export table then.
+     
 Program does not support any error messages. If program just closes silently then one of the following cases occured:
   1) BmpFile not found.
   2) BmpFile has wrong format.
